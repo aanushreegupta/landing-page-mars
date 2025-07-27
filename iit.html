@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #d878b2;
+      background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #1a2a6c);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards 0.5s;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards 1.5s;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: rgba(227, 139, 205, 0.1);
+      border: 2px solid #d7afcf;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards 2.5s;
+    }
+
+    .btn:hover {
+      background: #a6086c;
+      color: #cf7aa2;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Welcome to MARS</h1>
+    <p>Unleash Bold Beauty — With Mars, Your Eyes Speak Louder Than Words.
+</p>
+    <a href="#" class="btn">Get Started</a>
+  </section>
+</body>
+</html>
